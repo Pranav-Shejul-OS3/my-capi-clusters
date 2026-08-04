@@ -18,4 +18,4 @@ spec:
       - key: clusterclass-name.fleet.addons.cluster.x-k8s.io
         operator: In
         values:
-          - my-longhorn-cluster
+          - docker-rke2-example
