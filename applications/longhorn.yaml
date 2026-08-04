@@ -8,7 +8,7 @@ spec:
     releaseName: longhorn
     repo: https://charts.longhorn.io
     chart: longhorn
-    targetNamespace: longhorn-system
+    Namespace: longhorn-system
     values:
       defaultSettings:
         defaultReplicaCount: 2
