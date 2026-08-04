@@ -1,0 +1,22 @@
+apiVersion: fleet.cattle.io/v1alpha1
+kind: HelmOp
+metadata:
+  name: longhorn
+spec:
+  helm:
+    version: v1.7.2
+    releaseName: longhorn
+    repo: https://charts.longhorn.io
+    chart: longhorn
+    targetNamespace: longhorn-system
+    createNamespace: true
+    values:
+      defaultSettings:
+        defaultReplicaCount: 2
+  targets:
+  - clusterSelector:
+      matchExpressions:
+      - key: clusterclass-name.fleet.addons.cluster.x-k8s.io
+        operator: In
+        values:
+          - my-longhorn-cluster
