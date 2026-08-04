@@ -8,10 +8,10 @@ spec:
     releaseName: longhorn
     repo: https://charts.longhorn.io
     chart: longhorn
-    Namespace: longhorn-system
     values:
       defaultSettings:
         defaultReplicaCount: 2
+  namespace: longhorn-system
   targets:
   - clusterSelector:
       matchExpressions:
