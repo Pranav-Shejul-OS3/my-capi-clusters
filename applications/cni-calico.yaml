@@ -29,6 +29,4 @@ spec:
       - {"op":"remove", "path":"/spec/kubernetesProvider"}
   insecureSkipTLSVerify: true
   targets:
-  - clusterSelector:
-    matchLabels:
-      management.cattle.io/cluster-display-name: my-longhorn-cluster
+  - clusterName: my-longhorn-cluster
