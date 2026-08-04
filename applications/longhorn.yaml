@@ -13,9 +13,4 @@ spec:
         defaultReplicaCount: 2
   namespace: longhorn-system
   targets:
-  - clusterSelector:
-      matchExpressions:
-      - key: clusterclass-name.fleet.addons.cluster.x-k8s.io
-        operator: In
-        values:
-          - docker-rke2-example
+  - clusterName: my-longhorn-cluster
