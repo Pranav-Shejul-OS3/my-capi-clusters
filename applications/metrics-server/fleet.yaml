@@ -1,0 +1,8 @@
+defaultNamespace: kube-system
+helm:
+  chart: metrics-server
+  repo: https://kubernetes-sigs.github.io/metrics-server/
+  version: 3.12.2
+  values:
+    args:
+      - --kubelet-insecure-tls
